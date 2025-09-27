@@ -1,0 +1,23 @@
+// 55. Máximo y Mínimo
+// Encuentra el valor máximo y mínimo en un array.
+
+// Definimos un array
+let datos = [15, 3, 27, 8, 42, -5, 19];
+
+// Inicializamos máximo y mínimo
+let max = datos[0];
+let min = datos[0];
+
+// Recorremos el array
+for (let i = 1; i < datos.length; i++) {
+  if (datos[i] > max) {
+    max = datos[i];
+  }
+  if (datos[i] < min) {
+    min = datos[i];
+  }
+}
+
+console.log("Array:", datos);
+console.log("Valor máximo:", max);
+console.log("Valor mínimo:", min);
