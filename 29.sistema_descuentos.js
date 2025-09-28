@@ -1,16 +1,19 @@
 // 29. Sistema de Descuentos
-// Aplica descuentos diferentes según categoría de cliente
+// Este programa aplica descuentos según la categoría del cliente
 
-// Pedimos la categoría
-let categoria = prompt("Ingrese la categoría del cliente (A, B, C):").toUpperCase();
+// Definimos la categoría del cliente
+let categoria = "B"; // Puede ser "A", "B" o "C"
 
-// Pedimos el valor de la compra
-let compra = parseFloat(prompt("Ingrese el valor de la compra:"));
+// Convertimos a mayúsculas para evitar errores con minúsculas
+categoria = categoria.toUpperCase();
 
-// Definimos el descuento
+// Definimos el valor de la compra
+let compra = 500; // Ejemplo: $500
+
+// Inicializamos el descuento
 let descuento = 0;
 
-// Usamos switch para asignar el descuento
+// Usamos switch para asignar el porcentaje de descuento según la categoría
 switch (categoria) {
     case "A":
         descuento = 0.20; // 20%
@@ -22,12 +25,12 @@ switch (categoria) {
         descuento = 0.05; // 5%
         break;
     default:
-        console.log("Categoría inválida.");
+        console.log("Categoría inválida."); // Si no es A, B ni C
 }
 
-// Si el descuento es válido, calculamos el precio final
+// Si el descuento es válido, calculamos el total a pagar
 if (descuento > 0) {
-    let total = compra - (compra * descuento);
+    let total = compra - (compra * descuento); // Precio final
     console.log("Categoría: " + categoria);
     console.log("Compra: $" + compra);
     console.log("Descuento: " + (descuento * 100) + "%");

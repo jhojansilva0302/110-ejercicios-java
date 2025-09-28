@@ -1,9 +1,10 @@
 // 62. Elementos Únicos
+// Muestra los elementos que aparecen solo una vez en un array
 
 // Definimos un array con algunos elementos repetidos
 let arreglo = [1, 2, 2, 3, 4, 4, 5];
 
-// Creamos un objeto vacío para contar repeticiones
+// Creamos un objeto para contar repeticiones
 let contador = {};
 
 // Recorremos el array para contar ocurrencias

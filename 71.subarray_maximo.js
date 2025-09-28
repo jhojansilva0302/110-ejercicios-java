@@ -10,17 +10,12 @@ let maxGlobal = numeros[0];   // suma máxima encontrada hasta ahora
 
 // Recorremos el array desde el segundo elemento
 for (let i = 1; i < numeros.length; i++) {
-  // Decidimos si sumamos el valor al subarray actual o empezamos uno nuevo
-  maxActual = Math.max(numeros[i], maxActual + numeros[i]);
-
-  // Actualizamos el máximo global si es necesario
+  maxActual = Math.max(numeros[i], maxActual + numeros[i]); // sumamos o reiniciamos subarray
   if (maxActual > maxGlobal) {
     maxGlobal = maxActual;
   }
 }
 
-// Mostramos el array original
-console.log("Array:", numeros);
-
-// Mostramos la suma máxima encontrada
+// Mostramos resultados
+console.log("Array original:", numeros);
 console.log("Suma máxima de subarray:", maxGlobal);

@@ -2,10 +2,10 @@
 //Este programa recibe dos números y muestra su suma, resta, multiplicación y división.
 
 // Pedimos al usuario el primer número
-let numero1 = parseFloat(prompt("Ingrese el primer número:"));
+let numero1 = parseFloat(10);
 
 // Pedimos al usuario el segundo número
-let numero2 = parseFloat(prompt("Ingrese el segundo número:"));
+let numero2 = parseFloat(10);
 
 // Calculamos la suma
 let suma = numero1 + numero2;

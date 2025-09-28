@@ -1,26 +1,31 @@
 // 19. Conversor de Moneda
-// Convierte entre diferentes monedas (ejemplo: USD, EUR, COP)
+// Este programa convierte un monto entre diferentes monedas (USD, EUR, COP)
 
-// Pedimos el monto
-let monto = parseFloat(prompt("Ingrese el monto a convertir:"));
+// Definimos el monto a convertir
+let monto = 10; // Puedes cambiarlo por cualquier cantidad
 
-// Pedimos la moneda de origen
-let origen = prompt("Ingrese la moneda de origen (USD, EUR, COP):").toUpperCase();
+// Definimos la moneda de origen y la moneda de destino
+let origen = "USD";   // Ejemplo: USD, EUR, COP
+let destino = "EUR";  // Ejemplo: USD, EUR, COP
 
-// Pedimos la moneda de destino
-let destino = prompt("Ingrese la moneda de destino (USD, EUR, COP):").toUpperCase();
+// Convertimos a mayúsculas para evitar errores con minúsculas
+origen = origen.toUpperCase();
+destino = destino.toUpperCase();
 
-// Definimos tasas de conversión ficticias
+// Definimos las tasas de conversión (ficticias)
 let tasas = {
     "USD": { "EUR": 0.92, "COP": 4000 },
     "EUR": { "USD": 1.09, "COP": 4400 },
     "COP": { "USD": 0.00025, "EUR": 0.00023 }
 };
 
-// Verificamos si existe la conversión
+// Verificamos si existe la conversión en el objeto tasas
 if (tasas[origen] && tasas[origen][destino]) {
+    // Calculamos el monto convertido
     let convertido = monto * tasas[origen][destino];
+    // Mostramos el resultado en consola
     console.log(monto + " " + origen + " equivalen a " + convertido + " " + destino);
 } else {
+    // Si no existe la tasa de conversión, mostramos un mensaje de error
     console.log("Conversión no disponible.");
 }

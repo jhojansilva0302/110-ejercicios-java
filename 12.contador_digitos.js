@@ -1,11 +1,13 @@
 // 12. Contador de Dígitos
-// Cuenta cuántos dígitos tiene un número
+// Este programa cuenta cuántos dígitos tiene un número dado
 
-// Pedimos un número al usuario
-let numero = prompt("Ingrese un número:");
+// Definimos el número que queremos analizar
+let numero = 100030;   // Puedes cambiarlo por cualquier número
 
-// Obtenemos la longitud de la cadena ingresada
-let cantidadDigitos = numero.length;
+// Convertimos el número a una cadena de texto (string)
+// Esto es necesario porque los números no tienen la propiedad .length
+let cantidadDigitos = numero.toString().length;
 
-// Mostramos el resultado
-console.log("El número tiene " + cantidadDigitos + " dígitos.");
+// Mostramos el resultado en consola
+console.log("El número tiene " + cantidadDigitos + " dígitos."); 
+// Ejemplo de salida: "El número tiene 6 dígitos."

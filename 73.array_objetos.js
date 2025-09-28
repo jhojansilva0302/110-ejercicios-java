@@ -8,7 +8,10 @@ let personas = [
   { nombre: "Carlos", edad: 30 }
 ];
 
-// Usamos sort para ordenar por la propiedad "edad"
+// Mostramos array original
+console.log("Array original:", personas);
+
+// Ordenamos por la propiedad "edad"
 personas.sort((a, b) => a.edad - b.edad);
 
 // Mostramos el array ordenado

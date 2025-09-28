@@ -2,7 +2,7 @@
 // Calcula la suma de los dígitos de un número
 
 // Pedimos un número al usuario
-let numero = prompt("Ingrese un número:");
+let numero = 10;
 
 // Inicializamos una variable para acumular la suma
 let suma = 0;

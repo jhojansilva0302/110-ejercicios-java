@@ -5,15 +5,10 @@
 let arr1 = [1, 3, 5, 7];
 let arr2 = [2, 4, 6, 8];
 
-// Concatenamos ambos arrays
-let combinado = arr1.concat(arr2);
+// Concatenamos ambos arrays y los ordenamos
+let combinado = arr1.concat(arr2).sort((a, b) => a - b);
 
-// Ordenamos el array resultante en orden ascendente
-combinado.sort((a, b) => a - b);
-
-// Mostramos los arrays originales
+// Mostramos resultados
 console.log("Array 1:", arr1);
 console.log("Array 2:", arr2);
-
-// Mostramos el array combinado ordenado
-console.log("Array combinado:", combinado);
+console.log("Array combinado ordenado:", combinado);

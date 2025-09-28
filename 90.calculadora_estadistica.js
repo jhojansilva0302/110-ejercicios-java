@@ -3,30 +3,30 @@
 
 // Función para calcular la media (promedio)
 function media(arr) {
-  let suma = arr.reduce((a, b) => a + b, 0);
-  return suma / arr.length;
+  let suma = arr.reduce((a, b) => a + b, 0); // sumamos todos los elementos
+  return suma / arr.length;                   // dividimos entre la cantidad de elementos
 }
 
 // Función para calcular la mediana
 function mediana(arr) {
-  arr.sort((a, b) => a - b); // ordenamos
-  let n = arr.length;
+  let arrOrdenado = [...arr].sort((a, b) => a - b); // copiamos y ordenamos el array
+  let n = arrOrdenado.length;
   if (n % 2 === 0) {
-    // si hay cantidad par de elementos
-    return (arr[n / 2 - 1] + arr[n / 2]) / 2;
+    // cantidad par: promedio de los dos elementos centrales
+    return (arrOrdenado[n / 2 - 1] + arrOrdenado[n / 2]) / 2;
   } else {
-    // si hay cantidad impar de elementos
-    return arr[Math.floor(n / 2)];
+    // cantidad impar: elemento central
+    return arrOrdenado[Math.floor(n / 2)];
   }
 }
 
 // Función para calcular la moda
 function moda(arr) {
-  let frecuencia = {};
-  let maxFrecuencia = 0;
-  let modas = [];
+  let frecuencia = {};       // objeto para contar ocurrencias
+  let maxFrecuencia = 0;     // frecuencia máxima encontrada
+  let modas = [];            // array para guardar los valores más frecuentes
 
-  // Contamos frecuencias
+  // Contamos la frecuencia de cada número
   for (let num of arr) {
     frecuencia[num] = (frecuencia[num] || 0) + 1;
     if (frecuencia[num] > maxFrecuencia) {
@@ -34,7 +34,7 @@ function moda(arr) {
     }
   }
 
-  // Obtenemos todos los valores con frecuencia máxima
+  // Guardamos todos los números que tienen la frecuencia máxima
   for (let num in frecuencia) {
     if (frecuencia[num] === maxFrecuencia) {
       modas.push(Number(num));
@@ -44,9 +44,11 @@ function moda(arr) {
   return modas;
 }
 
-// Ejemplo de uso
+// Datos de ejemplo
 let datos = [1, 2, 2, 3, 4, 5, 5, 5, 6];
-console.log("Datos:", datos);
+
+// Mostramos resultados
+console.log("Conjunto de datos:", datos);
 console.log("Media:", media(datos));
 console.log("Mediana:", mediana(datos));
 console.log("Moda:", moda(datos));

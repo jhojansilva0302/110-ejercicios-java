@@ -25,7 +25,8 @@ function dividir(a, b) {
 }
 
 // Ejemplos de uso
-console.log("Suma:", sumar(5, 3));
-console.log("Resta:", restar(10, 4));
-console.log("Multiplicación:", multiplicar(6, 7));
-console.log("División:", dividir(20, 5));
+console.log("5 + 3 =", sumar(5, 3));
+console.log("10 - 4 =", restar(10, 4));
+console.log("6 * 7 =", multiplicar(6, 7));
+console.log("20 / 5 =", dividir(20, 5));
+console.log("10 / 0 =", dividir(10, 0)); // prueba división por cero

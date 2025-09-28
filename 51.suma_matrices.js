@@ -1,7 +1,7 @@
 // 51. Suma de Matrices
-// Suma dos matrices de igual dimensión.
+// Suma dos matrices de igual dimensión
 
-// Definimos dos matrices
+// Definimos dos matrices de ejemplo
 let matrizA = [
   [1, 2, 3],
   [4, 5, 6]
@@ -15,14 +15,15 @@ let matrizB = [
 // Creamos matriz resultado vacía
 let resultado = [];
 
-// Recorremos las filas
+// Recorremos cada fila y columna para sumar elemento a elemento
 for (let i = 0; i < matrizA.length; i++) {
-  resultado[i] = []; // inicializamos fila
+  resultado[i] = []; // inicializamos la fila
   for (let j = 0; j < matrizA[i].length; j++) {
-    resultado[i][j] = matrizA[i][j] + matrizB[i][j]; // suma elemento a elemento
+    resultado[i][j] = matrizA[i][j] + matrizB[i][j]; // suma
   }
 }
 
+// Mostramos matrices y resultado
 console.log("Matriz A:", matrizA);
 console.log("Matriz B:", matrizB);
 console.log("Resultado de la suma:", resultado);

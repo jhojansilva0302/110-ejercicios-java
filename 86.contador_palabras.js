@@ -3,17 +3,23 @@
 
 // Función que cuenta palabras en un texto
 function contarPalabras(texto) {
-  // Eliminamos espacios al inicio y final
-  texto = texto.trim();
-
-  // Dividimos el texto por espacios (uno o más)
-  let palabras = texto.split(/\s+/);
-
-  // Retornamos la cantidad de palabras
+  texto = texto.trim(); // eliminamos espacios al inicio y final
+  if (texto === "") return 0; // si está vacío, retorna 0
+  let palabras = texto.split(/\s+/); // separamos por uno o más espacios
   return palabras.length;
 }
 
-// Ejemplo de uso
-let frase = "Hola Jhojan, estamos practicando JavaScript paso a paso";
-console.log("Texto:", frase);
-console.log("Cantidad de palabras:", contarPalabras(frase));
+// Ejemplos de textos
+let textos = [
+  "Hola, estoy practicando JavaScript paso a paso",
+  "   Esto   tiene   muchos   espacios   ",
+  "",
+  "Una sola palabra"
+];
+
+// Mostramos cada texto y su conteo de palabras
+textos.forEach(texto => {
+  console.log("Texto:", `"${texto}"`);
+  console.log("Cantidad de palabras:", contarPalabras(texto));
+  console.log("---------------------------");
+});

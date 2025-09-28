@@ -5,7 +5,7 @@
 let añoActual = new Date().getFullYear();
 
 // Pedimos el año de nacimiento
-let añoNacimiento = parseInt(prompt("Ingrese su año de nacimiento:"));
+let añoNacimiento = parseInt(10);
 
 // Calculamos la edad restando el año actual menos el de nacimiento
 let edad = añoActual - añoNacimiento;

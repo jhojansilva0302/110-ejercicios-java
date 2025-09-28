@@ -33,3 +33,9 @@ function eliminarArchivo(nombre) {
 crearArchivo("nota.txt", "Hola Jhojan, este es un archivo simulado.");
 console.log("Leer archivo:", leerArchivo("nota.txt"));
 eliminarArchivo("nota.txt");
+
+// Intentamos leer de nuevo para verificar eliminación
+console.log("Leer archivo después de eliminar:", leerArchivo("nota.txt"));
+
+// Mostramos el estado actual del sistema de archivos
+console.log("Sistema de archivos actual:", sistemaArchivos);

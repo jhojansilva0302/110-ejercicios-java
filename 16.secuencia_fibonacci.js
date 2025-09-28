@@ -2,7 +2,7 @@
 // Genera los primeros n números de Fibonacci
 
 // Pedimos la cantidad de números a generar
-let n = parseInt(prompt("¿Cuántos números de Fibonacci quiere generar?"));
+let n = parseInt(10);
 
 // Inicializamos los dos primeros números de la secuencia
 let a = 0, b = 1;

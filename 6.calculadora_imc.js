@@ -2,10 +2,10 @@
 // Fórmula: IMC = peso / (altura^2)
 
 // Pedimos el peso en kilogramos
-let peso = parseFloat(prompt("Ingrese su peso en kilogramos:"));
+let peso = parseFloat(10);
 
 // Pedimos la altura en metros
-let altura = parseFloat(prompt("Ingrese su altura en metros:"));
+let altura = parseFloat(10);
 
 // Calculamos el IMC
 let imc = peso / (altura * altura);

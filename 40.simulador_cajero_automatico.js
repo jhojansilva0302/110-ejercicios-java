@@ -1,49 +1,49 @@
 // 40. Simulador de Cajero Automático
-// Simula consultar saldo, depositar y retirar dinero.
+// Simula consultar saldo, depositar y retirar dinero
 
-let saldo = 500000; // saldo inicial
-let opcion;
+// Saldo inicial
+let saldo = 500000;
 
-do {
-  // Mostramos menú
-  console.log("\n--- Cajero Automático ---");
-  console.log("1. Consultar saldo");
-  console.log("2. Depositar dinero");
-  console.log("3. Retirar dinero");
-  console.log("4. Salir");
+// Definimos la opción que vamos a simular (1: consultar, 2: depositar, 3: retirar, 4: salir)
+let opcion = 2; // Ejemplo: simulamos depositar dinero
 
-  opcion = parseInt(prompt("Seleccione una opción:"));
+// Mostramos menú
+console.log("\n--- Cajero Automático ---");
+console.log("1. Consultar saldo");
+console.log("2. Depositar dinero");
+console.log("3. Retirar dinero");
+console.log("4. Salir");
 
-  switch (opcion) {
-    case 1:
-      console.log("Saldo actual: $" + saldo);
-      break;
+// Switch según la opción
+switch (opcion) {
+  case 1: // Consultar saldo
+    console.log("Saldo actual: $" + saldo);
+    break;
 
-    case 2:
-      let deposito = parseFloat(prompt("Ingrese cantidad a depositar:"));
-      if (deposito > 0) {
-        saldo += deposito;
-        console.log("Depósito exitoso. Nuevo saldo: $" + saldo);
-      } else {
-        console.log("Cantidad inválida.");
-      }
-      break;
+  case 2: // Depositar dinero
+    let deposito = 200000; // simulamos depósito de $200,000
+    if (deposito > 0) {
+      saldo += deposito;
+      console.log("Depósito exitoso. Nuevo saldo: $" + saldo);
+    } else {
+      console.log("Cantidad inválida.");
+    }
+    break;
 
-    case 3:
-      let retiro = parseFloat(prompt("Ingrese cantidad a retirar:"));
-      if (retiro > 0 && retiro <= saldo) {
-        saldo -= retiro;
-        console.log("Retiro exitoso. Nuevo saldo: $" + saldo);
-      } else {
-        console.log("Cantidad inválida o insuficiente.");
-      }
-      break;
+  case 3: // Retirar dinero
+    let retiro = 100000; // simulamos retiro de $100,000
+    if (retiro > 0 && retiro <= saldo) {
+      saldo -= retiro;
+      console.log("Retiro exitoso. Nuevo saldo: $" + saldo);
+    } else {
+      console.log("Cantidad inválida o insuficiente.");
+    }
+    break;
 
-    case 4:
-      console.log("Gracias por usar el cajero. 👋");
-      break;
+  case 4: // Salir
+    console.log("Gracias por usar el cajero. 👋");
+    break;
 
-    default:
-      console.log("Opción no válida.");
-  }
-} while (opcion !== 4);
+  default: // Opción no válida
+    console.log("Opción no válida.");
+}

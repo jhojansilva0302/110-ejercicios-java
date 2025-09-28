@@ -16,12 +16,17 @@ for (let i = 0; i < matriz.length; i++) {
   rotada[i] = []; // inicializamos la fila
   for (let j = 0; j < matriz.length; j++) {
     rotada[i][j] = matriz[matriz.length - j - 1][i]; 
-    // tomamos elementos en orden girado
   }
 }
 
 // Mostramos la matriz original
-console.log("Matriz original:", matriz);
+console.log("Matriz original:");
+for (let fila of matriz) {
+  console.log(fila);
+}
 
 // Mostramos la matriz rotada
-console.log("Matriz rotada 90°:", rotada);
+console.log("Matriz rotada 90°:");
+for (let fila of rotada) {
+  console.log(fila);
+}

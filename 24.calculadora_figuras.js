@@ -1,29 +1,33 @@
 // 24. Calculadora de Figuras
-// Calcula área y perímetro de diferentes figuras geométricas
+// Este programa calcula el área y el perímetro de diferentes figuras geométricas
 
-// Pedimos la figura
-let figura = prompt("Ingrese la figura (cuadrado, rectangulo, circulo):").toLowerCase();
+// Definimos la figura a calcular
+let figura = "cuadrado"; // Puede ser "cuadrado", "rectangulo" o "circulo"
 
+// Convertimos a minúsculas para evitar errores con mayúsculas
+figura = figura.toLowerCase();
+
+// Usamos switch para determinar qué figura calcular
 switch (figura) {
     case "cuadrado":
-        let lado = parseFloat(prompt("Ingrese el lado del cuadrado:"));
-        console.log("Área: " + (lado * lado));
-        console.log("Perímetro: " + (4 * lado));
+        let lado = 5; // Ejemplo de medida del lado
+        console.log("Área: " + (lado * lado));         // Área = lado^2
+        console.log("Perímetro: " + (4 * lado));       // Perímetro = 4 * lado
         break;
 
     case "rectangulo":
-        let base = parseFloat(prompt("Ingrese la base del rectángulo:"));
-        let altura = parseFloat(prompt("Ingrese la altura del rectángulo:"));
-        console.log("Área: " + (base * altura));
-        console.log("Perímetro: " + (2 * (base + altura)));
+        let base = 8;    // Ejemplo de base
+        let altura = 4;  // Ejemplo de altura
+        console.log("Área: " + (base * altura));                   // Área = base * altura
+        console.log("Perímetro: " + (2 * (base + altura)));       // Perímetro = 2*(base+altura)
         break;
 
     case "circulo":
-        let radio = parseFloat(prompt("Ingrese el radio del círculo:"));
-        console.log("Área: " + (Math.PI * radio * radio));
-        console.log("Perímetro: " + (2 * Math.PI * radio));
+        let radio = 3;  // Ejemplo de radio
+        console.log("Área: " + (Math.PI * radio * radio));       // Área = π*r^2
+        console.log("Perímetro: " + (2 * Math.PI * radio));     // Perímetro = 2*π*r
         break;
 
     default:
-        console.log("Figura no válida.");
+        console.log("Figura no válida."); // Si la figura no es ninguna de las anteriores
 }

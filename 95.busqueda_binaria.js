@@ -10,7 +10,7 @@ function busquedaBinaria(arr, objetivo) {
     let medio = Math.floor((inicio + fin) / 2);
 
     if (arr[medio] === objetivo) {
-      return medio; // encontrado
+      return medio; // índice encontrado
     } else if (arr[medio] < objetivo) {
       inicio = medio + 1; // buscar en la mitad derecha
     } else {
@@ -21,8 +21,15 @@ function busquedaBinaria(arr, objetivo) {
   return -1; // no encontrado
 }
 
-// Ejemplo de uso
+// Array de ejemplo
 let numeros = [1, 3, 5, 7, 9, 11, 13];
-console.log("Array:", numeros);
-console.log("Buscar 7:", busquedaBinaria(numeros, 7));
-console.log("Buscar 4:", busquedaBinaria(numeros, 4));
+
+// Mostramos el array
+console.log("Array ordenado:", numeros);
+
+// Ejemplos de búsqueda
+let buscar1 = 7;
+let buscar2 = 4;
+
+console.log("Buscar", buscar1 + ":", busquedaBinaria(numeros, buscar1));
+console.log("Buscar", buscar2 + ":", busquedaBinaria(numeros, buscar2));

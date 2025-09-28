@@ -1,16 +1,16 @@
 // 50. Palíndromo
-// Verifica si una palabra o número es palíndromo.
+// Verifica si una palabra o número es palíndromo
 
-// Pedimos el valor
-let palabra = prompt("Ingrese una palabra o número:").toLowerCase();
+// Definimos la palabra o número a analizar
+let palabra = "Anilina".toLowerCase(); // ejemplo: "Anilina"
 
-// Eliminamos espacios y tildes
+// Normalizamos: eliminamos tildes y espacios
 palabra = palabra.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "");
 
 // Invertimos la cadena
 let invertida = palabra.split("").reverse().join("");
 
-// Comparamos
+// Comparamos la palabra original con la invertida
 if (palabra === invertida) {
   console.log("Es un palíndromo ✅");
 } else {

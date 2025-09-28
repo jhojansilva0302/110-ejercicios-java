@@ -2,7 +2,7 @@
 // Determina si un número es par o impar usando el operador módulo.
 
 // Pedimos un número al usuario
-let numero = parseInt(prompt("Ingrese un número:"));
+let numero = parseInt(10);
 
 // Usamos el operador % para obtener el residuo
 if (numero % 2 === 0) {

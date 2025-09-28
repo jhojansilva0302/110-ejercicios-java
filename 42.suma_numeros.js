@@ -2,7 +2,7 @@
 // Calcula la suma de los primeros n números naturales.
 
 // Pedimos n al usuario
-let n = parseInt(prompt("Ingrese un número n:"));
+let n = parseInt(10);
 
 // Validamos
 if (isNaN(n) || n <= 0) {

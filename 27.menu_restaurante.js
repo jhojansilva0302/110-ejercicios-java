@@ -1,17 +1,17 @@
 // 27. Menú de Restaurante
-// Simula un menú con diferentes opciones de comida
+// Este programa simula un menú de opciones de comida
 
-// Mostramos el menú
+// Mostramos el menú en consola
 console.log("Menú:");
 console.log("1. Hamburguesa");
 console.log("2. Pizza");
 console.log("3. Ensalada");
 console.log("4. Perro Caliente");
 
-// Pedimos la opción
-let opcion = parseInt(prompt("Ingrese el número de la opción deseada:"));
+// Definimos la opción seleccionada (ejemplo)
+let opcion = 2; // Cambiar por 1,2,3 o 4 según la elección del usuario
 
-// Usamos switch para mostrar la selección
+// Usamos switch para determinar qué opción se eligió
 switch (opcion) {
     case 1:
         console.log("Usted eligió Hamburguesa.");
@@ -26,5 +26,5 @@ switch (opcion) {
         console.log("Usted eligió Perro Caliente.");
         break;
     default:
-        console.log("Opción inválida.");
+        console.log("Opción inválida."); // Si la opción no está entre 1 y 4
 }

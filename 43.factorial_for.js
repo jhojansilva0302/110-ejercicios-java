@@ -2,7 +2,7 @@
 // Calcula el factorial de un número usando bucle for.
 
 // Pedimos el número
-let num = parseInt(prompt("Ingrese un número entero positivo:"));
+let num = parseInt(10);
 
 // Validamos
 if (isNaN(num) || num < 0) {

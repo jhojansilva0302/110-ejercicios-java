@@ -26,3 +26,11 @@ console.log("Coseno(0):", coseno(0));
 console.log("Tangente(π/4):", tangente(Math.PI / 4));
 console.log("Logaritmo(10):", logaritmo(10));
 console.log("2^8:", potencia(2, 8));
+
+// Versión extendida: puedes ingresar cualquier valor
+let valor = Math.PI / 3;
+console.log(`Seno(${valor}):`, seno(valor));
+console.log(`Coseno(${valor}):`, coseno(valor));
+console.log(`Tangente(${valor}):`, tangente(valor));
+console.log(`Logaritmo(${valor}):`, logaritmo(valor));
+console.log(`${valor}^3:`, potencia(valor, 3));

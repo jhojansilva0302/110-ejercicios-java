@@ -25,8 +25,10 @@ function cifrarCesar(texto, desplazamiento) {
   return resultado;
 }
 
-// Ejemplo de uso
+// Mensaje y desplazamiento de ejemplo
 let mensaje = "Hola Jhojan";
-let cifrado = cifrarCesar(mensaje, 3);
+let desplazamiento = 3;
+
+// Mostramos el texto original y cifrado
 console.log("Texto original:", mensaje);
-console.log("Texto cifrado:", cifrado);
+console.log("Texto cifrado (desplazamiento " + desplazamiento + "):", cifrarCesar(mensaje, desplazamiento));

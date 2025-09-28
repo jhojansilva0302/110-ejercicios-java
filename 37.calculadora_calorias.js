@@ -1,31 +1,32 @@
 // 37. Calculadora de Calorías
-// Calcula calorías quemadas según actividad física y tiempo.
+// Calcula calorías quemadas según actividad física y tiempo
 
-// Pedimos el tipo de actividad
-let actividad = prompt("Ingrese la actividad (correr, nadar, ciclismo):").toLowerCase();
+// Definimos el tipo de actividad
+let actividad = "correr"; // puede ser "correr", "nadar" o "ciclismo"
+actividad = actividad.toLowerCase(); // normalizamos a minúsculas
 
-// Pedimos el tiempo en minutos
-let minutos = parseInt(prompt("Ingrese el tiempo en minutos:"));
+// Definimos el tiempo de actividad en minutos
+let minutos = 30; // ejemplo: 30 minutos
 
-// Definimos tasa de calorías por minuto para cada actividad
+// Definimos la tasa de calorías por minuto según la actividad
 let caloriasPorMinuto;
 
 switch (actividad) {
   case "correr":
-    caloriasPorMinuto = 10; // 10 calorías por minuto
+    caloriasPorMinuto = 10;
     break;
   case "nadar":
-    caloriasPorMinuto = 8; // 8 calorías por minuto
+    caloriasPorMinuto = 8;
     break;
   case "ciclismo":
-    caloriasPorMinuto = 6; // 6 calorías por minuto
+    caloriasPorMinuto = 6;
     break;
   default:
-    caloriasPorMinuto = 0; // actividad no válida
+    caloriasPorMinuto = 0;
     console.log("Actividad no reconocida.");
 }
 
-// Si es válida, calculamos calorías totales
+// Calculamos calorías totales si la actividad es válida y el tiempo es positivo
 if (caloriasPorMinuto > 0 && minutos > 0) {
   let total = caloriasPorMinuto * minutos;
   console.log(`Calorías quemadas: ${total}`);

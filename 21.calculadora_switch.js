@@ -1,31 +1,31 @@
 // 21. Calculadora con Switch
-// Implementa una calculadora usando switch para las operaciones
+// Esta calculadora realiza operaciones básicas usando switch
 
-// Pedimos dos números
-let num1 = parseFloat(prompt("Ingrese el primer número:"));
-let num2 = parseFloat(prompt("Ingrese el segundo número:"));
+// Definimos los dos números a operar
+let num1 = 10; // Primer número
+let num2 = 5;  // Segundo número
 
-// Pedimos la operación
-let operacion = prompt("Ingrese la operación (+, -, *, /):");
+// Definimos la operación a realizar
+let operacion = "+"; // Puede ser "+", "-", "*", "/"
 
 // Usamos switch para decidir qué operación realizar
 switch (operacion) {
-    case "+":
+    case "+": // Suma
         console.log("Resultado: " + (num1 + num2));
         break;
-    case "-":
+    case "-": // Resta
         console.log("Resultado: " + (num1 - num2));
         break;
-    case "*":
+    case "*": // Multiplicación
         console.log("Resultado: " + (num1 * num2));
         break;
-    case "/":
+    case "/": // División
         if (num2 !== 0) {
             console.log("Resultado: " + (num1 / num2));
         } else {
             console.log("Error: División por cero.");
         }
         break;
-    default:
+    default: // Si no es ninguna operación válida
         console.log("Operación no válida.");
 }

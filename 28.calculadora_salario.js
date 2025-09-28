@@ -1,17 +1,20 @@
 // 28. Calculadora de Salario
-// Calcula salario según horas trabajadas y tipo de empleado
+// Este programa calcula el salario según las horas trabajadas y el tipo de empleado
 
-// Pedimos horas trabajadas
-let horas = parseFloat(prompt("Ingrese el número de horas trabajadas:"));
+// Definimos las horas trabajadas
+let horas = 8; // Ejemplo: 8 horas
 
-// Pedimos tipo de empleado
-let tipo = prompt("Ingrese el tipo de empleado (normal/extra):").toLowerCase();
+// Definimos el tipo de empleado
+let tipo = "extra"; // Puede ser "normal" o "extra"
 
-// Definimos la tarifa base
+// Convertimos a minúsculas para evitar errores con mayúsculas
+tipo = tipo.toLowerCase();
+
+// Definimos las tarifas por hora
 let tarifaNormal = 10000; // por hora
 let tarifaExtra = 15000;  // por hora
 
-// Usamos switch para calcular el salario
+// Usamos switch para calcular el salario según el tipo de empleado
 switch (tipo) {
     case "normal":
         console.log("Salario: $" + (horas * tarifaNormal));
@@ -20,5 +23,5 @@ switch (tipo) {
         console.log("Salario: $" + (horas * tarifaExtra));
         break;
     default:
-        console.log("Tipo de empleado no válido.");
+        console.log("Tipo de empleado no válido."); // Si no es "normal" ni "extra"
 }

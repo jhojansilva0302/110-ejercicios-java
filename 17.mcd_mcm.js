@@ -17,8 +17,8 @@ function calcularMCM(x, y) {
 }
 
 // Pedimos dos números al usuario
-let num1 = parseInt(prompt("Ingrese el primer número:"));
-let num2 = parseInt(prompt("Ingrese el segundo número:"));
+let num1 = parseInt(10);
+let num2 = parseInt(10);
 
 // Calculamos MCD y MCM
 let mcd = calcularMCD(num1, num2);

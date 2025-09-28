@@ -2,7 +2,7 @@
 // Verifica si una contraseña tiene al menos 8 caracteres
 
 // Pedimos una contraseña al usuario
-let contrasena = prompt("Ingrese una contraseña:");
+let contrasena = 10;
 
 // Verificamos la longitud de la contraseña
 if (contrasena.length >= 8) {

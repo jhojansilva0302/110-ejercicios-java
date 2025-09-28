@@ -1,16 +1,19 @@
 // 31. Calculadora de Impuestos
 // Calcula el valor a pagar con impuesto según la categoría del producto
 
-// Pedimos el valor del producto
-let valor = parseFloat(prompt("Ingrese el valor del producto:"));
+// Definimos el valor del producto
+let valor = 1000; // Ejemplo: $1000
 
-// Pedimos la categoría
-let categoria = prompt("Ingrese la categoría del producto (A, B, C):").toUpperCase();
+// Definimos la categoría del producto
+let categoria = "B"; // Puede ser "A", "B" o "C"
 
-// Variable para guardar el impuesto
+// Convertimos a mayúsculas para evitar errores
+categoria = categoria.toUpperCase();
+
+// Variable para guardar el porcentaje de impuesto
 let impuesto = 0;
 
-// Switch para asignar el porcentaje de impuesto
+// Usamos switch para asignar el porcentaje de impuesto según categoría
 switch (categoria) {
     case "A":
         impuesto = 0.19; // 19%
@@ -25,41 +28,46 @@ switch (categoria) {
         console.log("Categoría inválida.");
 }
 
-// Si la categoría fue válida, calculamos el total
+// Si la categoría es válida, calculamos el total a pagar
 if (impuesto > 0) {
     let total = valor + (valor * impuesto);
     console.log("Valor del producto: $" + valor);
     console.log("Impuesto (" + (impuesto * 100) + "%): $" + (valor * impuesto));
     console.log("Total a pagar: $" + total);
 }
-// 31. Calculadora de Impuestos: Calcula impuestos según diferentes rangos de ingresos.
 
-// Pedimos al usuario que ingrese su ingreso (mensual o anual según prefieras)
-let ingreso = parseFloat(prompt("Ingrese su ingreso (por ejemplo 2500000):")); // lee y convierte a número
+// -----------------------------------------------------------------
+
+// Calculadora de impuestos según rangos de ingreso
+
+// Definimos el ingreso del usuario
+let ingreso = 3500000; // Ejemplo: 3.500.000
 
 // Verificamos que el ingreso sea un número válido
-if (isNaN(ingreso)) { // si ingreso no es número
-  console.log("Ingreso inválido."); // informamos error
-} else { // si ingreso es válido
-  let tasa = 0; // inicializamos la tasa de impuesto (en decimal)
-  let impuesto = 0; // inicializamos el valor del impuesto a pagar
+if (isNaN(ingreso)) {
+    console.log("Ingreso inválido.");
+} else {
+    let tasa = 0;       // Inicializamos la tasa de impuesto
+    let impuestoRango = 0; // Inicializamos el valor del impuesto
 
-  // Asignamos la tasa según rangos de ingreso
-  if (ingreso <= 1000000) { // primer rango
-    tasa = 0.05; // 5% de impuesto
-  } else if (ingreso <= 3000000) { // segundo rango
-    tasa = 0.10; // 10% de impuesto
-  } else if (ingreso <= 5000000) { // tercer rango
-    tasa = 0.15; // 15% de impuesto
-  } else { // para ingresos mayores al rango anterior
-    tasa = 0.20; // 20% de impuesto
-  }
+    // Asignamos la tasa según rangos de ingreso
+    if (ingreso <= 1000000) {
+        tasa = 0.05; // 5%
+    } else if (ingreso <= 3000000) {
+        tasa = 0.10; // 10%
+    } else if (ingreso <= 5000000) {
+        tasa = 0.15; // 15%
+    } else {
+        tasa = 0.20; // 20% para ingresos mayores
+    }
 
-  impuesto = ingreso * tasa; // calculamos el monto del impuesto multiplicando ingreso por tasa
-  let ingresoNeto = ingreso - impuesto; // calculamos el ingreso después de deducir el impuesto
+    // Calculamos el impuesto y el ingreso neto
+    impuestoRango = ingreso * tasa;
+    let ingresoNeto = ingreso - impuestoRango;
 
-  console.log("Ingreso bruto: " + ingreso); // mostramos ingreso bruto
-  console.log("Tasa aplicada: " + (tasa * 100) + "%"); // mostramos la tasa en porcentaje
-  console.log("Impuesto a pagar: " + impuesto); // mostramos el monto de impuesto
-  console.log("Ingreso neto (después de impuesto): " + ingresoNeto); // mostramos ingreso neto
+    // Mostramos los resultados
+    console.log("Ingreso bruto: $" + ingreso);
+    console.log("Tasa aplicada: " + (tasa * 100) + "%");
+    console.log("Impuesto a pagar: $" + impuestoRango);
+    console.log("Ingreso neto (después de impuesto): $" + ingresoNeto);
 }

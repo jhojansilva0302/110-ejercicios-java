@@ -22,7 +22,10 @@ for (let i = 0; i < matriz.length; i++) {
 }
 
 // Mostramos la matriz original
-console.log("Matriz:", matriz);
+console.log("Matriz:");
+for (let fila of matriz) {
+  console.log(fila);
+}
 
 // Mostramos si es simétrica o no
 console.log("¿Es simétrica?:", simetrica);

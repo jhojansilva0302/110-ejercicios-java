@@ -5,17 +5,19 @@
 let array = [10, 20, 30, 40, 50];
 
 // Valor que queremos buscar
-let buscar = parseInt(prompt("Ingrese el valor a buscar:"));
+let buscar = parseInt(10);
 
 // Valor por el que lo reemplazaremos
-let reemplazo = parseInt(prompt("Ingrese el nuevo valor:"));
+let reemplazo = parseInt(10);
 
-// Recorremos el array
+// Recorremos el array y reemplazamos si coincide
 for (let i = 0; i < array.length; i++) {
-  if (array[i] === buscar) { // si encontramos el valor
-    array[i] = reemplazo;    // lo reemplazamos
+  if (array[i] === buscar) {
+    array[i] = reemplazo;
   }
 }
 
-// Mostramos el array resultante
+// Mostramos resultados
+console.log("Array original: [10, 20, 30, 40, 50]");
+console.log(`Se reemplazó ${buscar} por ${reemplazo}`);
 console.log("Array modificado:", array);

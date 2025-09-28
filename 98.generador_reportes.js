@@ -7,14 +7,18 @@ function generarReporte(ventas) {
   let promedio = total / ventas.length;
 
   return `
-  === REPORTE DE VENTAS ===
-  Ventas registradas: ${ventas.join(", ")}
-  Total de ventas: ${total}
-  Promedio de ventas: ${promedio.toFixed(2)}
-  =========================
+=== REPORTE DE VENTAS ===
+Ventas registradas: ${ventas.join(", ")}
+Total de ventas: ${total}
+Promedio de ventas: ${promedio.toFixed(2)}
+=========================
   `;
 }
 
 // Ejemplo de uso
 let ventas = [120, 340, 560, 230, 150];
 console.log(generarReporte(ventas));
+
+// Versión extendida: generar reporte para otro conjunto de ventas
+let ventasMes = [450, 300, 200, 600, 750, 400];
+console.log(generarReporte(ventasMes));

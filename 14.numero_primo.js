@@ -2,7 +2,7 @@
 // Verifica si un número es primo (solo divisible entre 1 y sí mismo)
 
 // Pedimos un número
-let numero = parseInt(prompt("Ingrese un número:"));
+let numero = parseInt(10);
 
 // Variable para indicar si es primo
 let esPrimo = true;

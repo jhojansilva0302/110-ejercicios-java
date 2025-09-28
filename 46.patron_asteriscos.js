@@ -1,10 +1,10 @@
 // 46. Patrón de Asteriscos
-// Crea diferentes patrones con asteriscos usando bucles.
+// Crea diferentes patrones con asteriscos usando bucles
 
-// Pedimos la cantidad de filas
-let filas = parseInt(prompt("Ingrese el número de filas para el patrón:"));
+// Definimos la cantidad de filas del patrón
+let filas = 5; // ejemplo: 5 filas
 
-// Validamos
+// Validamos que la cantidad sea positiva
 if (isNaN(filas) || filas <= 0) {
   console.log("Número inválido.");
 } else {

@@ -20,7 +20,8 @@ function ordenarArray(arr) {
   return arr; // devolvemos el array ordenado
 }
 
-// Ejemplo de uso
+// Array de ejemplo
 let numeros = [64, 34, 25, 12, 22, 11, 90];
+
 console.log("Array original:", numeros);
-console.log("Array ordenado:", ordenarArray(numeros));
+console.log("Array ordenado:", ordenarArray([...numeros])); // usamos copia para mantener el original

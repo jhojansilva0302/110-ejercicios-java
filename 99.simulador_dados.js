@@ -16,3 +16,9 @@ function lanzarDosDados() {
 // Ejemplo de uso
 console.log("Lanzar un dado:", lanzarDado());
 console.log("Lanzar dos dados:", lanzarDosDados());
+
+// Simulación de 5 lanzamientos de dos dados
+for (let i = 1; i <= 5; i++) {
+  let resultado = lanzarDosDados();
+  console.log(`Lanzamiento ${i}: Dado1=${resultado.dado1}, Dado2=${resultado.dado2}, Suma=${resultado.suma}`);
+}

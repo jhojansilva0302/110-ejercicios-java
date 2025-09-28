@@ -5,9 +5,9 @@
 function generarContrasena(longitud) {
   // Definimos los caracteres disponibles
   const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
-
+  
   let contrasena = "";
-
+  
   // Recorremos tantas veces como indique la longitud
   for (let i = 0; i < longitud; i++) {
     // Generamos un índice aleatorio
@@ -15,9 +15,11 @@ function generarContrasena(longitud) {
     // Añadimos el carácter correspondiente
     contrasena += caracteres[indice];
   }
-
+  
   return contrasena;
 }
 
-// Ejemplo de contraseña de 12 caracteres
-console.log("Contraseña generada:", generarContrasena(12));
+// Ejemplos de contraseñas
+console.log("Contraseña de 8 caracteres:", generarContrasena(8));
+console.log("Contraseña de 12 caracteres:", generarContrasena(12));
+console.log("Contraseña de 16 caracteres:", generarContrasena(16));

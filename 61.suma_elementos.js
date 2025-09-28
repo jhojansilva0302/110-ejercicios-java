@@ -1,4 +1,5 @@
 // 61. Suma de Elementos
+// Suma todos los elementos de un array
 
 // Definimos un array con algunos números
 let numeros = [5, 10, 15, 20, 25];
@@ -8,7 +9,7 @@ let suma = 0;
 
 // Recorremos el array con un bucle for
 for (let i = 0; i < numeros.length; i++) {
-  suma += numeros[i]; // en cada vuelta sumamos el elemento actual
+  suma += numeros[i]; // sumamos el elemento actual
 }
 
 // Mostramos el array original

@@ -1,8 +1,7 @@
-// 108. Descuento por edad con ternario
-
 let edadCliente = 65;
 
-// Ternario anidado para aplicar descuento
+// Descuento según la edad
+// < 18 → 20%, >= 60 → 30%, resto → sin descuento
 let descuento = 
   (edadCliente < 18) ? "20% de descuento" :
   (edadCliente >= 60) ? "30% de descuento" :

@@ -19,8 +19,8 @@ function validarDato(dato) {
 }
 
 // Probamos la función con diferentes valores
-console.log(validarDato("Hola"));
-console.log(validarDato(123));
-console.log(validarDato(true));
-console.log(validarDato([1, 2, 3]));
-console.log(validarDato({ nombre: "Jhojan" }));
+console.log("Entrada: 'Hola' →", validarDato("Hola"));
+console.log("Entrada: 123 →", validarDato(123));
+console.log("Entrada: true →", validarDato(true));
+console.log("Entrada: [1, 2, 3] →", validarDato([1, 2, 3]));
+console.log("Entrada: { nombre: 'Jhojan' } →", validarDato({ nombre: "Jhojan" }));

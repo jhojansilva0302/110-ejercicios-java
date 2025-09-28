@@ -2,10 +2,10 @@
 // Aplica un descuento porcentual a un precio
 
 // Pedimos el precio original
-let precio = parseFloat(prompt("Ingrese el precio del producto:"));
+let precio = parseFloat(10);
 
 // Pedimos el porcentaje de descuento
-let descuento = parseFloat(prompt("Ingrese el porcentaje de descuento:"));
+let descuento = parseFloat(10);
 
 // Calculamos el valor descontado
 let valorDescuento = (precio * descuento) / 100;

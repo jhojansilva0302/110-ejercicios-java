@@ -2,7 +2,7 @@
 // Genera la tabla de multiplicar de un número hasta 10.
 
 // Pedimos el número al usuario
-let numero = parseInt(prompt("Ingrese un número para ver su tabla de multiplicar:"));
+let numero = parseInt(10);
 
 // Verificamos que sea válido
 if (isNaN(numero)) {

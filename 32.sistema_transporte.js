@@ -1,38 +1,42 @@
-// 32. Sistema de Transporte: Calcula tarifas según medio de transporte y distancia.
+// 32. Sistema de Transporte
+// Este programa calcula tarifas según el medio de transporte y la distancia
 
-// Pedimos al usuario el medio de transporte
-let medio = prompt("Ingrese el medio de transporte (taxi, bus, metro):").toLowerCase(); // normaliza a minúsculas
+// Definimos el medio de transporte
+let medio = "Taxi"; // Puede ser "taxi", "bus" o "metro"
 
-// Pedimos al usuario la distancia a recorrer en kilómetros
-let distancia = parseFloat(prompt("Ingrese la distancia en km:")); // convierte a número
+// Convertimos a minúsculas para normalizar la entrada
+medio = medio.toLowerCase();
 
-// Validamos entrada de distancia
-if (isNaN(distancia) || distancia < 0) { // si distancia no es válida
-  console.log("Distancia inválida."); // mostramos error
-} else { // si distancia válida
-  let tarifaPorKm = 0; // inicializamos tarifa por km
+// Definimos la distancia a recorrer en kilómetros
+let distancia = 10; // Ejemplo: 10 km
 
-  // Asignamos tarifa por km según el medio
-  switch (medio) { // evaluamos el medio de transporte
-    case "taxi": // si es taxi
-      tarifaPorKm = 2000; // tarifa en moneda local por km
-      break; // salimos del switch
-    case "bus": // si es bus
-      tarifaPorKm = 500; // tarifa por km
-      break; // salimos del switch
-    case "metro": // si es metro
-      tarifaPorKm = 700; // tarifa por km
-      break; // salimos del switch
-    default: // si no coincide con ninguna opción
-      console.log("Medio de transporte inválido."); // mostramos error
-  }
+// Validamos que la distancia sea un número válido y positivo
+if (isNaN(distancia) || distancia < 0) {
+    console.log("Distancia inválida.");
+} else {
+    let tarifaPorKm = 0; // Inicializamos la tarifa por km
 
-  // Si tarifaPorKm se asignó (no es 0), calculamos y mostramos el total
-  if (tarifaPorKm > 0) { // comprobamos que exista tarifa asignada
-    let tarifaTotal = tarifaPorKm * distancia; // multiplicamos tarifa por distancia
-    console.log("Medio: " + medio); // mostramos el medio
-    console.log("Distancia (km): " + distancia); // mostramos la distancia
-    console.log("Tarifa por km: " + tarifaPorKm); // mostramos tarifa por km
-    console.log("Tarifa total: " + tarifaTotal); // mostramos tarifa total a pagar
-  }
+    // Asignamos tarifa por km según el medio de transporte
+    switch (medio) {
+        case "taxi":
+            tarifaPorKm = 2000; // tarifa por km
+            break;
+        case "bus":
+            tarifaPorKm = 500;  // tarifa por km
+            break;
+        case "metro":
+            tarifaPorKm = 700;  // tarifa por km
+            break;
+        default:
+            console.log("Medio de transporte inválido.");
+    }
+
+    // Si la tarifa es válida, calculamos y mostramos el total
+    if (tarifaPorKm > 0) {
+        let tarifaTotal = tarifaPorKm * distancia; // total a pagar
+        console.log("Medio: " + medio);
+        console.log("Distancia (km): " + distancia);
+        console.log("Tarifa por km: " + tarifaPorKm);
+        console.log("Tarifa total: " + tarifaTotal);
+    }
 }

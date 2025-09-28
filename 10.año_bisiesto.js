@@ -3,7 +3,7 @@
 // salvo que también sea divisible por 400.
 
 // Pedimos un año al usuario
-let año = parseInt(prompt("Ingrese un año:"));
+let año = parseInt(2010);
 
 // Verificamos las condiciones
 if ((año % 4 === 0 && año % 100 !== 0) || (año % 400 === 0)) {

@@ -12,13 +12,11 @@ let faltantes = [];
 
 // Recorremos desde 1 hasta el número máximo
 for (let i = 1; i <= max; i++) {
-  if (!numeros.includes(i)) { // si no está en el array
-    faltantes.push(i);        // lo añadimos como faltante
+  if (!numeros.includes(i)) {
+    faltantes.push(i);
   }
 }
 
-// Mostramos el array original
-console.log("Array:", numeros);
-
-// Mostramos los números faltantes
+// Mostramos resultados
+console.log("Array original:", numeros);
 console.log("Elementos faltantes:", faltantes);

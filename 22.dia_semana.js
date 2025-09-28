@@ -2,7 +2,7 @@
 // Muestra el nombre del día según un número (1-7)
 
 // Pedimos un número del 1 al 7
-let dia = parseInt(prompt("Ingrese un número del 1 al 7:"));
+let dia = parseInt(10);
 
 // Usamos switch para identificar el día
 switch (dia) {

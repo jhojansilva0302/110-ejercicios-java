@@ -1,10 +1,10 @@
 // 45. Números Primos
-// Genera los primeros n números primos.
+// Genera los primeros n números primos
 
-// Pedimos n
-let cantidadPrimos = parseInt(prompt("Ingrese la cantidad de números primos a mostrar:"));
+// Definimos cuántos números primos queremos generar
+let cantidadPrimos = 10; // ejemplo: generar los primeros 10 primos
 
-// Validamos
+// Validamos que la cantidad sea positiva
 if (isNaN(cantidadPrimos) || cantidadPrimos <= 0) {
   console.log("Número inválido.");
 } else {

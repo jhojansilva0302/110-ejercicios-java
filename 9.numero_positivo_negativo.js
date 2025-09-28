@@ -2,7 +2,7 @@
 // Determina si un número es positivo, negativo o cero
 
 // Pedimos un número al usuario
-let numero = parseFloat(prompt("Ingrese un número:"));
+let numero = parseFloat(10);
 
 // Evaluamos el signo del número
 if (numero > 0) {

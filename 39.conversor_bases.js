@@ -1,19 +1,17 @@
 // 39. Conversor de Bases
-// Convierte un número entre binario, decimal y hexadecimal.
+// Convierte un número entre binario, decimal y hexadecimal
 
-// Pedimos el número como texto
-let numero = prompt("Ingrese el número a convertir:");
+// Definimos el número como string (para evitar problemas con bases)
+let numero = "1010"; // ejemplo: binario 1010
 
-// Pedimos la base de origen
-let baseOrigen = parseInt(prompt("Ingrese la base de origen (2, 10, 16):"));
+// Definimos la base de origen y destino
+let baseOrigen = 2;   // 2 = binario, 10 = decimal, 16 = hexadecimal
+let baseDestino = 10; // 2 = binario, 10 = decimal, 16 = hexadecimal
 
-// Pedimos la base destino
-let baseDestino = parseInt(prompt("Ingrese la base destino (2, 10, 16):"));
-
-// Intentamos convertir
+// Convertimos el número a decimal
 let decimal = parseInt(numero, baseOrigen);
 
-// Verificamos que sea válido
+// Verificamos que la conversión sea válida
 if (isNaN(decimal)) {
   console.log("Número inválido para la base indicada.");
 } else {

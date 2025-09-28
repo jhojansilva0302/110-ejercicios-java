@@ -11,13 +11,11 @@ let matriz = [
 // Inicializamos la suma en 0
 let sumaDiagonal = 0;
 
-// Recorremos solo los índices de la diagonal principal (i = j)
+// Recorremos solo los índices de la diagonal principal
 for (let i = 0; i < matriz.length; i++) {
-  sumaDiagonal += matriz[i][i]; // sumamos el valor de la diagonal
+  sumaDiagonal += matriz[i][i];
 }
 
-// Mostramos la matriz original
+// Mostramos resultados
 console.log("Matriz:", matriz);
-
-// Mostramos la suma de la diagonal principal
 console.log("Suma diagonal principal:", sumaDiagonal);

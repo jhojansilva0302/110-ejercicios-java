@@ -1,23 +1,25 @@
-// 5. Conversor de Temperatura
-// Convierte de Celsius a Fahrenheit y viceversa.
+// Definimos la temperatura que queremos convertir
+let temperatura = 10;       // Puedes usar parseFloat("10") si la temperatura viene de un usuario
 
-// Pedimos la temperatura al usuario
-let temperatura = parseFloat(prompt("Ingrese la temperatura:"));
+// Definimos el tipo de conversión que queremos hacer
+let tipo = "C";             // Debe ser "C" para convertir a Fahrenheit o "F" para convertir a Celsius
 
-// Pedimos el tipo de conversión
-let tipo = prompt("Escriba 'C' si la temperatura está en Celsius o 'F' si está en Fahrenheit:");
-
-// Si el usuario escribió "C", convertimos a Fahrenheit
+// Verificamos si el tipo ingresado es "C" (Celsius) para convertir a Fahrenheit
 if (tipo.toUpperCase() === "C") {
+    // Fórmula para convertir Celsius a Fahrenheit
     let fahrenheit = (temperatura * 9/5) + 32;
+    // Mostramos el resultado en consola
     console.log(temperatura + "°C equivalen a " + fahrenheit + "°F");
 } 
-// Si el usuario escribió "F", convertimos a Celsius
+// Verificamos si el tipo ingresado es "F" (Fahrenheit) para convertir a Celsius
 else if (tipo.toUpperCase() === "F") {
+    // Fórmula para convertir Fahrenheit a Celsius
     let celsius = (temperatura - 32) * 5/9;
+    // Mostramos el resultado en consola
     console.log(temperatura + "°F equivalen a " + celsius + "°C");
 } 
-// Si escribe otra cosa, mostramos error
+// Si el usuario ingresó cualquier otra cosa que no sea "C" o "F"
 else {
+    // Mostramos un mensaje de error
     console.log("Unidad no válida, escriba C o F.");
 }

@@ -7,23 +7,22 @@ let n = 3;
 
 // Función recursiva para contar caminos
 function contarCaminos(i, j, n) {
-  // Si llegamos al borde de la matriz
+  // Si llegamos a la esquina inferior derecha
   if (i === n - 1 && j === n - 1) {
-    return 1; // hay un camino válido
+    return 1; // camino válido
   }
+  // Si nos salimos de los límites
   if (i >= n || j >= n) {
-    return 0; // fuera de los límites
+    return 0; 
   }
 
-  // Sumamos los caminos moviéndose hacia abajo y hacia la derecha
+  // Caminos hacia abajo y hacia la derecha
   return contarCaminos(i + 1, j, n) + contarCaminos(i, j + 1, n);
 }
 
 // Llamamos a la función desde la esquina (0,0)
 let caminos = contarCaminos(0, 0, n);
 
-// Mostramos el tamaño de la matriz
+// Mostramos los resultados
 console.log(`Matriz de tamaño ${n}x${n}`);
-
-// Mostramos la cantidad de caminos posibles
 console.log("Caminos posibles:", caminos);

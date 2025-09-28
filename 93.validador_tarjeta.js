@@ -23,5 +23,9 @@ function validarTarjeta(numero) {
   return (suma % 10 === 0);
 }
 
-// Ejemplo de uso
-console.log("¿Es válida la tarjeta?", validarTarjeta("4539578763621486")); // Visa de prueba
+// Número de tarjeta de ejemplo
+let tarjeta = "4539578763621486";
+
+// Mostramos el número y si es válido
+console.log("Número de tarjeta:", tarjeta);
+console.log("¿Es válida la tarjeta?", validarTarjeta(tarjeta) ? "✅ Válida" : "❌ No válida");

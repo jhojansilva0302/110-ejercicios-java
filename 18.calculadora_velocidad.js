@@ -1,25 +1,31 @@
 // 18. Calculadora de Velocidad
 // Fórmulas: v = d / t, d = v * t, t = d / v
 
-// Pedimos qué queremos calcular
-let opcion = prompt("¿Qué desea calcular? (velocidad/distancia/tiempo)").toLowerCase();
+// Definimos qué queremos calcular
+let opcion = "velocidad"; // Puede ser "velocidad", "distancia" o "tiempo"
+
+// Convertimos a minúsculas para evitar errores con mayúsculas
+opcion = opcion.toLowerCase();
 
 // Según la opción ingresada, pedimos los datos necesarios
 if (opcion === "velocidad") {
-    let distancia = parseFloat(prompt("Ingrese la distancia (m):"));
-    let tiempo = parseFloat(prompt("Ingrese el tiempo (s):"));
-    let velocidad = distancia / tiempo;
+    let distancia = 100;  // Valor de ejemplo en metros
+    let tiempo = 10;      // Valor de ejemplo en segundos
+    let velocidad = distancia / tiempo; // Fórmula v = d / t
     console.log("La velocidad es: " + velocidad + " m/s");
-} else if (opcion === "distancia") {
-    let velocidad = parseFloat(prompt("Ingrese la velocidad (m/s):"));
-    let tiempo = parseFloat(prompt("Ingrese el tiempo (s):"));
-    let distancia = velocidad * tiempo;
+} 
+else if (opcion === "distancia") {
+    let velocidad = 10;   // Valor de ejemplo en m/s
+    let tiempo = 10;      // Valor de ejemplo en segundos
+    let distancia = velocidad * tiempo; // Fórmula d = v * t
     console.log("La distancia es: " + distancia + " m");
-} else if (opcion === "tiempo") {
-    let distancia = parseFloat(prompt("Ingrese la distancia (m):"));
-    let velocidad = parseFloat(prompt("Ingrese la velocidad (m/s):"));
-    let tiempo = distancia / velocidad;
+} 
+else if (opcion === "tiempo") {
+    let distancia = 100;  // Valor de ejemplo en metros
+    let velocidad = 10;   // Valor de ejemplo en m/s
+    let tiempo = distancia / velocidad; // Fórmula t = d / v
     console.log("El tiempo es: " + tiempo + " s");
-} else {
+} 
+else {
     console.log("Opción no válida.");
 }

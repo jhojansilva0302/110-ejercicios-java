@@ -6,9 +6,11 @@ function convertirBase(numero, base) {
   return numero.toString(base);
 }
 
-// Ejemplo de uso
+// Número de ejemplo
 let numero = 255;
-console.log("Número en decimal:", numero);
-console.log("Binario:", convertirBase(numero, 2));
-console.log("Octal:", convertirBase(numero, 8));
-console.log("Hexadecimal:", convertirBase(numero, 16));
+
+// Mostramos resultados en consola
+console.log("Número decimal:", numero);
+console.log(`Binario (base 2): ${convertirBase(numero, 2)}`);
+console.log(`Octal (base 8): ${convertirBase(numero, 8)}`);
+console.log(`Hexadecimal (base 16): ${convertirBase(numero, 16)}`);

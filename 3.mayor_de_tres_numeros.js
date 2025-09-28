@@ -2,9 +2,9 @@
 // Encuentra el mayor de tres números usando if-else.
 
 // Pedimos tres números al usuario
-let a = parseFloat(prompt("Ingrese el primer número:"));
-let b = parseFloat(prompt("Ingrese el segundo número:"));
-let c = parseFloat(prompt("Ingrese el tercer número:"));
+let a = parseFloat(10);
+let b = parseFloat(1);
+let c = parseFloat(100);
 
 // Usamos condicionales para comparar los tres valores
 if (a >= b && a >= c) {

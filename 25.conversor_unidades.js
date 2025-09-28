@@ -1,48 +1,50 @@
 // 25. Conversor de Unidades
-// Convierte entre diferentes unidades de medida (ejemplo: metros, kilómetros, centímetros)
+// Este programa convierte entre diferentes unidades de longitud (metros, kilómetros, centímetros)
 
-// Pedimos la cantidad
-let cantidad = parseFloat(prompt("Ingrese la cantidad a convertir:"));
+// Definimos la cantidad a convertir
+let cantidad = 1500; // Ejemplo: 1500 unidades
 
-// Pedimos la unidad de origen
-let origen = prompt("Ingrese la unidad de origen (m, km, cm):").toLowerCase();
+// Definimos la unidad de origen y la unidad de destino
+let origen = "cm";   // Puede ser "m", "km" o "cm"
+let destino = "m";   // Puede ser "m", "km" o "cm"
 
-// Pedimos la unidad de destino
-let destino = prompt("Ingrese la unidad de destino (m, km, cm):").toLowerCase();
+// Convertimos a minúsculas para evitar errores con mayúsculas
+origen = origen.toLowerCase();
+destino = destino.toLowerCase();
 
-// Convertimos primero todo a metros como base
+// Convertimos primero todo a metros como unidad base
 let enMetros;
 switch (origen) {
     case "m":
         enMetros = cantidad;
         break;
     case "km":
-        enMetros = cantidad * 1000;
+        enMetros = cantidad * 1000; // 1 km = 1000 m
         break;
     case "cm":
-        enMetros = cantidad / 100;
+        enMetros = cantidad / 100;  // 1 cm = 0.01 m
         break;
     default:
         console.log("Unidad de origen inválida.");
 }
 
-// Ahora convertimos de metros a la unidad destino
+// Convertimos de metros a la unidad de destino
 let resultado;
 switch (destino) {
     case "m":
         resultado = enMetros;
         break;
     case "km":
-        resultado = enMetros / 1000;
+        resultado = enMetros / 1000; // Convertimos metros a km
         break;
     case "cm":
-        resultado = enMetros * 100;
+        resultado = enMetros * 100;  // Convertimos metros a cm
         break;
     default:
         console.log("Unidad de destino inválida.");
 }
 
-// Mostramos el resultado si se calcularon valores válidos
+// Mostramos el resultado si todo fue válido
 if (resultado !== undefined) {
     console.log(cantidad + " " + origen + " equivalen a " + resultado + " " + destino);
 }

@@ -1,20 +1,23 @@
 // 30. Juego de Piedra, Papel o Tijera
-// Implementa el juego clásico contra la computadora
+// Este programa implementa el juego clásico contra la computadora
 
 // Opciones posibles
 let opciones = ["piedra", "papel", "tijera"];
 
-// Pedimos al jugador su elección
-let jugador = prompt("Elija: piedra, papel o tijera").toLowerCase();
+// Definimos la elección del jugador (ejemplo)
+let jugador = "Piedra"; // Puede ser "piedra", "papel" o "tijera"
+
+// Convertimos a minúsculas para evitar errores con mayúsculas
+jugador = jugador.toLowerCase();
 
 // La computadora elige aleatoriamente
 let computadora = opciones[Math.floor(Math.random() * 3)];
 
-// Mostramos elecciones
+// Mostramos las elecciones
 console.log("Jugador: " + jugador);
 console.log("Computadora: " + computadora);
 
-// Determinamos el resultado
+// Determinamos el resultado del juego
 if (jugador === computadora) {
     console.log("Empate!");
 } else if (
@@ -26,5 +29,5 @@ if (jugador === computadora) {
 } else if (opciones.includes(jugador)) {
     console.log("Perdiste.");
 } else {
-    console.log("Opción inválida.");
+    console.log("Opción inválida."); // Si el jugador ingresó algo que no es válido
 }

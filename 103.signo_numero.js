@@ -2,7 +2,7 @@
 
 let n = -5;
 
-// Usamos ternario anidado
+// Ternario anidado para determinar el signo
 let signo = (n > 0) ? "Positivo" : (n < 0) ? "Negativo" : "Cero";
 
 console.log(`${n} es: ${signo}`);

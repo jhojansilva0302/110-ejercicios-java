@@ -2,7 +2,7 @@
 // Calcula el factorial de un número (n! = n * (n-1) * ... * 1)
 
 // Pedimos un número
-let numero = parseInt(prompt("Ingrese un número:"));
+let numero = parseInt(10);
 
 // Inicializamos el resultado en 1
 let factorial = 1;

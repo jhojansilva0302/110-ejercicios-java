@@ -8,7 +8,10 @@ function fibonacci(n) {
   return fibonacci(n - 1) + fibonacci(n - 2); // recursión
 }
 
-// Ejemplo: primeros 10 números de Fibonacci
-for (let i = 0; i < 10; i++) {
-  console.log(`Fibonacci(${i}) =`, fibonacci(i));
+// Probamos los primeros 10 números de Fibonacci
+let cantidad = 10;
+
+console.log(`Primeros ${cantidad} números de Fibonacci:`);
+for (let i = 0; i < cantidad; i++) {
+  console.log(`Fibonacci(${i}) = ${fibonacci(i)}`);
 }
